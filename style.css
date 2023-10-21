@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    font-size: 16px;
+}
+:root{
+   --Pale-Violet: hsl(276, 100%, 81%); 
+   /* sub-heading at the top of the app UI */
+    --Moderate-Violet:hsl(276, 55%, 52%);
+    /* chat on the left */
+    --Desaturated-Dark-Violet:hsl(271, 15%, 43%);
+    /* chat on the right */
+    --Very-Dark-Desaturated-Violet:hsl(271, 36%, 24%);
+    /* main heading */
+    --Grayish-Blue:hsl(206, 6%, 79%);
+    /* placeholder text */
+    --Dark-Grayish-Violet:hsl(270, 7%, 64%);
+    /* paragraph */
+   
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    /* gradient */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet:hsl(270, 20%, 96%);
+    /* app background */
+    --Very-Dark-Desaturated-Violet:hsl(271, 36%, 24%);
+    /* submit button background */
+    --Very-Light-Magenta:hsl(289, 100%, 72%);
+    /* radio button outline */
+}
+
+.body-wrapper{
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.body-wrapper::after,
+.body-wrapper::before{
+    content: "";
+    position: absolute;
+    width:50%;
+    height: 60vh;
+    z-index: -1;
+}
+
+.body-wrapper::before{
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-bottom-right-radius: 18em;
+}
+
+.body-wrapper::after{
+    bottom:0;
+    right:0;
+    background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-top-left-radius: 18em;
+    opacity: .1;
+}
+
+.container{
+    width:90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4em;
+    padding: 5em 0;
+}
+
+/* hero image styles  */
+
+.hero-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-shape{
+    width:300px;
+    border:10px solid var(--White);
+    border-radius: 2em;
+    background-color: var(--Light-Grayish-Violet);
+    overflow: hidden;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .4);
+}
+.chat-app-header{
+    position: relative;
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 0 .5em .5em .5em;
+}
+.white-decorative-div{
+    width: 55%;
+    height:1.5em;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: var(--White);
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+.chat-app-header-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:.2em;
+    padding-top: 2em;
+}
+.chat-user-div{
+    display: flex;
+    align-items: center;
+    gap:.5em;
+}
+.profile-pic{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border:1.5px solid var(--White)
+}
+
+.profile-name{
+    font-weight: 700;
+    font-size: 1rem;
+    color:var(--White)
+}
+.profile-desc{
+    font-size: .8rem;
+    font-weight: 400;
+    color:var(--Pale-Violet);
+}
+
+.chat-display-div-wrapper{
+    padding: 1em;
+}
+.chat-received-div,
+.chat-send-div{
+    margin-bottom:1em ;
+    display: flex;
+    align-items: center;
+}
+.chat-received-div{
+    justify-content:flex-start;
+}
+.chat-send-div{
+    justify-content: flex-end;
+}
+.chat-received,
+.chat-send{
+    font-size: .7rem;
+    padding: .5em;
+    width:70%;
+}
+.chat-received{
+   background-color: hsla(206, 6%, 79%,.5);;
+   border-radius: 1em 1em 1em .5em;
+   color:var(--Moderate-Violet);
+}
+
+.chat-send{
+    color:var(--Desaturated-Dark-Violet);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+    border-radius: 1em 1em .5em 1em;
+    background-color: var(--White);
+}
+.chat-send-image{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:.5em;
+    box-shadow: none;
+    padding: 0;
+    background-color: transparent;
+}
+.sended-img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: .8em;
+}
+.prices-deal{
+    width: 80%;
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:.5em;
+}
+.price{
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--White);
+}
+.prices-deal-left{
+    display: flex;
+    align-items: center;
+    gap:.9em;
+}
+.time{
+    color: var(--White);
+}
+
+.chat-entering-div{
+    position: relative;
+}
+.chatting{
+    width:100%;
+    padding: 1em;
+    color:var(--Grayish-Blue);
+    border-radius: 2em;
+    border: none;
+}
+.submit-btn{
+    border:1px solid var(--Very-Dark-Desaturated-Violet);
+    border-radius: 50%;
+    position: absolute;
+    right:3%;
+    bottom:50%;
+    transform: translateY(50%);
+    width:2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+}
+/* hero content styles  */
+.hero-content{
+    text-align: center;
+}
+.hero-title{
+    color:var(--Very-Dark-Desaturated-Violet);
+    font-weight: 500;
+    margin-bottom: .6em;
+}
+.hero-description{
+    font-weight: 400;
+    color: var(--Dark-Grayish-Violet);
+    line-height: 1.5;
+}
+
+
+/* large screen */
+@media screen and (min-width:720px){
+    .body-wrapper::after,
+    .body-wrapper::before{
+        width:12rem;
+        height: 80%;
+    }
+    .container{
+        width: 80%;
+    }
+    .hero-section{
+        flex-direction: row;
+        gap: 2em;
+    }
+    .hero-content,
+    .hero-image{
+        width:50%;
+    }
+    .hero-content{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:980px){
+    .body-wrapper::after,
+    .body-wrapper::before{
+        width:25rem;
+    }
+    .body-wrapper::after{
+        border-top-right-radius: 18em;
+        right:-5em;
+    }
+    .body-wrapper::before{
+        border-bottom-left-radius: 18em;
+        left:-5em;
+    }
+}
